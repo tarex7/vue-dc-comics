@@ -52,6 +52,10 @@ footer {
 
       img {
         margin: 0 10px;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

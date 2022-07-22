@@ -7,14 +7,14 @@
             src="../assets/img/buy-comics-digital-comics.png"
             alt="buy-comics-digital-comics"
           />
-          <p class="media-text">Digital comics</p>
+          <p class="media-text"><a href="#">Digital comics</a></p>
         </div>
         <div class="media">
           <img
             src="../assets/img/buy-comics-merchandise.png"
             alt="buy-comics-merchandise"
           />
-          <p class="media-text">Dc merchandise</p>
+          <p class="media-text"><a href="#">Dc merchandise</a></p>
         </div>
 
         <div class="media">
@@ -22,7 +22,7 @@
             src="../assets/img/buy-comics-subscriptions.png"
             alt="buy-comics-subscriptions"
           />
-          <p class="media-text">Subscription</p>
+          <p class="media-text"><a href="#">Subscription</a></p>
         </div>
 
         <div class="media">
@@ -30,7 +30,7 @@
             src="../assets/img/buy-comics-shop-locator.png"
             alt="buy-comics-shop-locator"
           />
-          <p class="media-text">Comic shop locator</p>
+          <p class="media-text"><a href="#">Comic shop locator</a></p>
         </div>
 
         <div class="media">
@@ -39,7 +39,7 @@
             src="../assets/img/buy-dc-power-visa.svg"
             alt="buy-dc-power-visa"
           />
-          <p class="media-text">Dc power visa</p>
+          <p class="media-text"><a href="#">Dc power visa</a></p>
         </div>
       </div>
     </div>
@@ -71,6 +71,13 @@ export default {
   .media-text {
     text-transform: uppercase;
     margin-left: 0px;
+  }
+
+  a {
+    color: #fff;
+    &:hover {
+      color: #000;
+    }
   }
 
   #dc-power {
