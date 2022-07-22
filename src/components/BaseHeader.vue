@@ -37,6 +37,10 @@ header {
   height: 120px;
   display: flex;
   padding: 20px 0;
+
+  a:hover {
+    color: #0282f9;
+  }
 }
 nav {
   display: flex;

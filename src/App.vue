@@ -3,6 +3,8 @@
     <BaseHeader />
     <TheMain />
     <BaseBanner />
+    <TopFooter />
+    <BottomFooter />
   </div>
 </template>
 
@@ -10,10 +12,12 @@
 import BaseHeader from "./components/BaseHeader.vue";
 import TheMain from "./components/TheMain.vue";
 import BaseBanner from "./components/BaseBanner.vue";
+import TopFooter from "./components/TopFooter.vue";
+import BottomFooter from "./components/BottomFooter.vue";
 
 export default {
   name: "App",
-  components: { BaseHeader, TheMain, BaseBanner },
+  components: { BaseHeader, TheMain, BaseBanner, TopFooter, BottomFooter },
 };
 </script>
 
@@ -33,7 +37,7 @@ body {
   color: #fff;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 

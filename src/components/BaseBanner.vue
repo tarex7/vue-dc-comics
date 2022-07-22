@@ -59,18 +59,17 @@ export default {
 
   .banner-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
   }
 
   .media-text {
     text-transform: uppercase;
-    font-size: 0.8rem;
     margin-left: 0px;
   }
 
