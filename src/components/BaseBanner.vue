@@ -49,12 +49,44 @@
 <script>
 export default {
   name: "BaseBanner",
+  data() {
+    return {
+      items: [
+        {
+          src: "../assets/img/buy-comics-digital-comics.png",
+          text: "Digital comics",
+          url: "#",
+        },
+        {
+          src: "../assets/img/buy-comics-merchandise.png",
+          text: "Dc merchandise",
+          url: "#",
+        },
+        {
+          src: "../assets/img/buy-comics-subscriptions.png",
+          text: "Subscription",
+          url: "#",
+        },
+        {
+          src: "../assets/img/buy-comics-shop-locator.png",
+          text: "Comic shop locator",
+          url: "#",
+        },
+        {
+          src: "../assets/img/buy-dc-power-visa.svg",
+          text: "Digital comics",
+          url: "#",
+        },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/vars";
 .banner {
-  background-color: #0282f9;
+  background-color: $primary-color;
   padding: 60px;
 
   .banner-icons {

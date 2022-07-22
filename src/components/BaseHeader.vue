@@ -82,9 +82,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/vars";
+
 .active {
-  color: #0282f9;
-  border-bottom: 8px solid #0282f9;
+  color: $primary-color;
+  border-bottom: 8px solid $primary-color;
 }
 header {
   height: 120px;
@@ -92,7 +94,7 @@ header {
   padding: 20px 0;
 
   a:hover {
-    color: #0282f9;
+    color: $primary-color;
   }
 }
 nav {

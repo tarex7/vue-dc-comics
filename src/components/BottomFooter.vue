@@ -33,6 +33,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/scss/vars";
+
 footer {
   background-color: #303030;
   padding: 50px;
@@ -46,7 +48,7 @@ footer {
       align-items: center;
 
       h3 {
-        color: #0282f9;
+        color: $primary-color;
         margin-right: 10px;
       }
 
@@ -66,6 +68,6 @@ h3 {
 .btn {
   padding: 15px;
   color: #fff;
-  border: 3px solid #0282f9;
+  border: 3px solid $primary-color;
 }
 </style>
