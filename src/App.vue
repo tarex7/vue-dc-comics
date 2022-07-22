@@ -2,16 +2,18 @@
   <div>
     <BaseHeader />
     <TheMain />
+    <BaseBanner />
   </div>
 </template>
 
 <script>
 import BaseHeader from "./components/BaseHeader.vue";
 import TheMain from "./components/TheMain.vue";
+import BaseBanner from "./components/BaseBanner.vue";
 
 export default {
   name: "App",
-  components: { BaseHeader, TheMain },
+  components: { BaseHeader, TheMain, BaseBanner },
 };
 </script>
 
