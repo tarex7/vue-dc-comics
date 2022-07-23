@@ -2,44 +2,11 @@
   <div class="banner">
     <div class="container">
       <div class="banner-icons">
-        <div class="media">
-          <img
-            src="../assets/img/buy-comics-digital-comics.png"
-            alt="buy-comics-digital-comics"
-          />
-          <p class="media-text"><a href="#">Digital comics</a></p>
-        </div>
-        <div class="media">
-          <img
-            src="../assets/img/buy-comics-merchandise.png"
-            alt="buy-comics-merchandise"
-          />
-          <p class="media-text"><a href="#">Dc merchandise</a></p>
-        </div>
-
-        <div class="media">
-          <img
-            src="../assets/img/buy-comics-subscriptions.png"
-            alt="buy-comics-subscriptions"
-          />
-          <p class="media-text"><a href="#">Subscription</a></p>
-        </div>
-
-        <div class="media">
-          <img
-            src="../assets/img/buy-comics-shop-locator.png"
-            alt="buy-comics-shop-locator"
-          />
-          <p class="media-text"><a href="#">Comic shop locator</a></p>
-        </div>
-
-        <div class="media">
-          <img
-            id="dc-power"
-            src="../assets/img/buy-dc-power-visa.svg"
-            alt="buy-dc-power-visa"
-          />
-          <p class="media-text"><a href="#">Dc power visa</a></p>
+        <div v-for="(item, index) in bannerItems" :key="index" class="media">
+          <a href="#">
+            <img :src="item.src" alt="buy-comics-digital-comics" />
+            <p class="media-text">{{ item.text }}</p>
+          </a>
         </div>
       </div>
     </div>
@@ -51,34 +18,39 @@ export default {
   name: "BaseBanner",
   data() {
     return {
-      items: [
+      bannerItems: [
         {
-          src: "../assets/img/buy-comics-digital-comics.png",
+          src: require("../assets/img/buy-comics-digital-comics.png"),
           text: "Digital comics",
           url: "#",
         },
         {
-          src: "../assets/img/buy-comics-merchandise.png",
+          src: require("../assets/img/buy-comics-merchandise.png"),
           text: "Dc merchandise",
           url: "#",
         },
         {
-          src: "../assets/img/buy-comics-subscriptions.png",
+          src: require("../assets/img/buy-comics-subscriptions.png"),
           text: "Subscription",
           url: "#",
         },
         {
-          src: "../assets/img/buy-comics-shop-locator.png",
+          src: require("../assets/img/buy-comics-shop-locator.png"),
           text: "Comic shop locator",
           url: "#",
         },
         {
-          src: "../assets/img/buy-dc-power-visa.svg",
-          text: "Digital comics",
+          src: require("../assets/img/buy-dc-power-visa.svg"),
+          text: "DC power visa",
           url: "#",
         },
       ],
     };
+  },
+  computed: {
+    image() {
+      return require(`../assets/img/${this.items.src}.png`);
+    },
   },
 };
 </script>
@@ -87,7 +59,7 @@ export default {
 @import "../assets/scss/vars";
 .banner {
   background-color: $primary-color;
-  padding: 60px;
+  padding: 40px;
 
   .banner-icons {
     display: flex;
@@ -95,20 +67,24 @@ export default {
   }
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
   }
 
   .media-text {
     text-transform: uppercase;
-    margin-left: 0px;
+    margin-left: 5px;
   }
 
   a {
     color: #fff;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+
     &:hover {
-      color: #000;
+      transform: scale(1.1);
     }
   }
 

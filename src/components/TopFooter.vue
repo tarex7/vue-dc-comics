@@ -6,7 +6,7 @@
         <div class="col">
           <h3>DC Comics</h3>
           <ul>
-            <li v-for="link in links" :key="link">
+            <li v-for="link in DCComicslinks" :key="link.text">
               <a :href="link.url" :class="{ active: link.current }">
                 {{ link.text }}</a
               >
@@ -14,33 +14,25 @@
           </ul>
           <h3>Shop</h3>
           <ul>
-            <li><a href="#">Shop DC</a></li>
-            <li><a href="#">Shop Dc Collectibles</a></li>
+            <li v-for="link in shop" :key="link.text">
+              <a href="#">{{ link.text }}</a>
+            </li>
           </ul>
         </div>
         <div class="col">
           <h3>DC</h3>
           <ul>
-            <li><a href="#">Characthers</a></li>
-            <li><a class="active" href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Collectibles</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">Fans</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Shop</a></li>
+            <li v-for="link in DCLinks" :key="link.text">
+              <a :href="link.url">{{ link.text }}</a>
+            </li>
           </ul>
         </div>
         <div class="col">
           <h3>Sites</h3>
           <ul>
-            <li><a href="#">Characthers</a></li>
-            <li><a class="active" href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
+            <li v-for="link in sites" :key="link.text">
+              <a :href="link.url">{{ link.text }}</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -53,7 +45,7 @@ export default {
   name: "TopFooter",
   data() {
     return {
-      links: [
+      DCComicslinks: [
         {
           text: "Characters",
           url: "#",
@@ -105,6 +97,77 @@ export default {
           current: false,
         },
       ],
+      DCLinks: [
+        {
+          text: "Terms of use",
+          url: "#",
+        },
+        {
+          text: "Privacy policy(New)",
+          url: "#",
+          current: true,
+        },
+        {
+          text: "Ad choices",
+          url: "#",
+        },
+        {
+          text: "Advertising",
+          url: "#",
+        },
+        {
+          text: "Jobs",
+          url: "#",
+        },
+        {
+          text: "Subscriptions",
+          url: "#",
+        },
+        {
+          text: "Talent Workshops",
+          url: "#",
+        },
+        {
+          text: "CPSC Certificates",
+          url: "#",
+        },
+        {
+          text: "Ratings",
+          url: "#",
+        },
+        {
+          text: "Shop Help",
+          url: "#",
+        },
+        {
+          text: "Contact Us",
+          url: "#",
+        },
+      ],
+      sites: [
+        {
+          text: "DC",
+          url: "#",
+        },
+        {
+          text: "MAD MAgazine",
+          url: "#",
+          current: true,
+        },
+        {
+          text: "DC Kids",
+          url: "#",
+        },
+        {
+          text: "DC Universe",
+          url: "#",
+        },
+        {
+          text: "DC Power Visa",
+          url: "#",
+        },
+      ],
+      shop: [{ text: "Shop DC" }, { text: "Shop DC Collectibles" }],
     };
   },
 };
@@ -113,6 +176,9 @@ export default {
 <style lang="scss" scoped>
 footer {
   background-image: url(../assets/img/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
   position: relative;
   padding: 40px;
@@ -128,22 +194,23 @@ footer {
   }
   h3 {
     text-transform: uppercase;
-    margin: 15px 0;
   }
   #logo {
     position: absolute;
-    top: -10%;
+    top: -11%;
     left: 53%;
-    width: 27%;
+    width: 650px;
   }
 
   ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 10px 0;
     li a {
       color: gray;
       justify-self: start;
+      margin: 5px 0;
     }
   }
 }

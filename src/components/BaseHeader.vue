@@ -7,7 +7,7 @@
         /></a>
         <div class="links">
           <ul>
-            <li v-for="link in links" :key="link">
+            <li v-for="link in links" :key="link.text">
               <a :href="link.url" :class="{ active: link.current }">
                 {{ link.text }}</a
               >
@@ -24,6 +24,7 @@ export default {
   name: "BaseHeader",
   data() {
     return {
+      currentActive: 0,
       links: [
         {
           text: "Characters",
@@ -77,6 +78,12 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    setCurrentActive(index) {
+      console.log(index);
+      this.currentActive = index;
+    },
   },
 };
 </script>

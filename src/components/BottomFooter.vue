@@ -54,7 +54,7 @@ footer {
 
       img {
         margin: 0 10px;
-        transition: all 0.3s;
+        transition: all 0.2s;
         &:hover {
           transform: scale(1.1);
         }
@@ -65,9 +65,15 @@ footer {
 h3 {
   text-transform: uppercase;
 }
+
 .btn {
   padding: 15px;
   color: #fff;
   border: 3px solid $primary-color;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: $primary-color;
+  }
 }
 </style>
