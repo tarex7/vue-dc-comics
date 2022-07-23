@@ -79,12 +79,6 @@ export default {
       ],
     };
   },
-  methods: {
-    setCurrentActive(index) {
-      console.log(index);
-      this.currentActive = index;
-    },
-  },
 };
 </script>
 
