@@ -6,7 +6,7 @@
         <div class="col">
           <h3>DC Comics</h3>
           <ul>
-            <li v-for="link in DCComicslinks" :key="link.text">
+            <li v-for="link in DCComicsLinks" :key="link.text">
               <a :href="link.url" :class="{ active: link.current }">
                 {{ link.text }}</a
               >
@@ -14,7 +14,7 @@
           </ul>
           <h3>Shop</h3>
           <ul>
-            <li v-for="link in shop" :key="link.text">
+            <li v-for="link in shopLinks" :key="link.text">
               <a href="#">{{ link.text }}</a>
             </li>
           </ul>
@@ -22,7 +22,7 @@
         <div class="col">
           <h3>DC</h3>
           <ul>
-            <li v-for="link in DCLinks" :key="link.text">
+            <li v-for="link in DClinks" :key="link.text">
               <a :href="link.url">{{ link.text }}</a>
             </li>
           </ul>
@@ -30,7 +30,7 @@
         <div class="col">
           <h3>Sites</h3>
           <ul>
-            <li v-for="link in sites" :key="link.text">
+            <li v-for="link in sitesLinks" :key="link.text">
               <a :href="link.url">{{ link.text }}</a>
             </li>
           </ul>
@@ -43,132 +43,12 @@
 <script>
 export default {
   name: "TopFooter",
-  data() {
-    return {
-      DCComicslinks: [
-        {
-          text: "Characters",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Comics",
-          url: "#",
-          current: true,
-        },
-        {
-          text: "Movies",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "TV",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Games",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Collectibles",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Videos",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Fans",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "News",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Shop",
-          url: "#",
-          current: false,
-        },
-      ],
-      DCLinks: [
-        {
-          text: "Terms of use",
-          url: "#",
-        },
-        {
-          text: "Privacy policy(New)",
-          url: "#",
-          current: true,
-        },
-        {
-          text: "Ad choices",
-          url: "#",
-        },
-        {
-          text: "Advertising",
-          url: "#",
-        },
-        {
-          text: "Jobs",
-          url: "#",
-        },
-        {
-          text: "Subscriptions",
-          url: "#",
-        },
-        {
-          text: "Talent Workshops",
-          url: "#",
-        },
-        {
-          text: "CPSC Certificates",
-          url: "#",
-        },
-        {
-          text: "Ratings",
-          url: "#",
-        },
-        {
-          text: "Shop Help",
-          url: "#",
-        },
-        {
-          text: "Contact Us",
-          url: "#",
-        },
-      ],
-      sites: [
-        {
-          text: "DC",
-          url: "#",
-        },
-        {
-          text: "MAD MAgazine",
-          url: "#",
-          current: true,
-        },
-        {
-          text: "DC Kids",
-          url: "#",
-        },
-        {
-          text: "DC Universe",
-          url: "#",
-        },
-        {
-          text: "DC Power Visa",
-          url: "#",
-        },
-      ],
-      shop: [{ text: "Shop DC" }, { text: "Shop DC Collectibles" }],
-    };
+
+  props: {
+    DCComicsLinks: Array,
+    DClinks: Array,
+    sitesLinks: Array,
+    shopLinks: Array,
   },
 };
 </script>

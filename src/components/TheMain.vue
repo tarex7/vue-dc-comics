@@ -17,7 +17,7 @@
 export default {
   name: "TheMain",
   props: {
-    comics: Object,
+    comics: Array,
   },
 };
 </script>
