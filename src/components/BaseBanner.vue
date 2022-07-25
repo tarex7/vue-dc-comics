@@ -4,7 +4,7 @@
       <div class="banner-icons">
         <div v-for="(item, index) in bannerItems" :key="index" class="media">
           <a href="#">
-            <img :src="item.src" alt="buy-comics-digital-comics" />
+            <img :src="item.src" :alt="item.text" />
             <p class="media-text">{{ item.text }}</p>
           </a>
         </div>
